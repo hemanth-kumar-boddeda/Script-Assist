@@ -1,7 +1,7 @@
-// Resources.tsx
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { Table, Loader, Title, ScrollArea, TextInput, Select } from '@mantine/core';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Resources.scss'; // Import the SCSS file specific to the Resources component
 
 const fetchResources = async () => {
@@ -69,7 +69,7 @@ const Resources = () => {
                 <td>{launch.name}</td>
                 <td>{new Date(launch.date_utc).toLocaleDateString()}</td>
                 <td>
-                  <a href={`/resources/${launch.id}`} className="details-link">View Details</a>
+                  <Link to={`/resources/${launch.id}`} className="details-link">View Details</Link>
                 </td>
               </tr>
             ))}
