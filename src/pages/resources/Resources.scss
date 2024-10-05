@@ -1,0 +1,48 @@
+// Resources.scss
+@use '../../styles/abstracts'; // Adjust the path as necessary
+
+.resources-container {
+  padding: 20px; // Padding around the container
+  background-color: abstracts.$greypurple; // Background color from abstracts
+}
+
+.resources-filters {
+  display: flex; // Flexbox for layout
+  justify-content: space-between; // Space between filters
+  margin-bottom: 20px; // Space below filters
+}
+
+.search-input {
+  width: 200px; // Width of the search input
+}
+
+.sort-select {
+  width: 150px; // Width of the sort select
+}
+
+table {
+  width: 100%; // Full width for the table
+  th, td {
+    text-align: left; // Align text to the left
+    padding: 10px; // Padding in cells
+  }
+}
+
+// Responsive Styles
+@media (max-width: 600px) {
+  .resources-filters {
+    flex-direction: column; // Stack filters vertically
+    align-items: flex-start; // Align items to the start
+  }
+
+  .search-input,
+  .sort-select {
+    width: 100%; // Full width on mobile
+    margin-bottom: 10px; // Space below each filter
+  }
+}
+
+.modal-image {
+    width: 100%; // Ensure full width
+    height: 600px; // Maintain aspect ratio
+  }

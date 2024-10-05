@@ -1,0 +1,55 @@
+// Landing.scss
+@use '../../styles/abstracts'; // Adjust the path to point to the abstracts folder
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; // Full height for centering
+  text-align: center; // Center text
+  padding: 20px;
+  background-color: abstracts.$greypurple; // Background color from colours file
+  font-family: abstracts.$font; // Font from fonts file
+}
+
+.landing-title {
+  font-size: abstracts.$heading1; // Font size from fonts file
+  color: abstracts.$darkblue; // Title color from colours file
+  margin-bottom: 20px; // Space below the title
+}
+
+.landing-text {
+  font-size: abstracts.$paragraph1; // Paragraph size from fonts file
+  color: abstracts.$darkPurple; // Text color from colours file
+  max-width: 600px; // Limit text width for better readability
+  margin-bottom: 40px; // Space below the text
+}
+
+.landing-button {
+  background-color: abstracts.$darkblue; // Button background from colours file
+  color: #fff; // White text color
+  padding: 10px 20px; // Button padding
+  border-radius: 5px; // Rounded corners
+  font-size: abstracts.$paragraph1; // Button font size from fonts file
+  border: none; // No border for the button
+
+  &:hover {
+    background-color: abstracts.$midpurple; // Change color on hover
+  }
+}
+
+// Responsive Styles
+@media(max-width: 600px) {
+  .landing-title {
+    font-size: abstracts.$headingMob1; // Mobile heading size
+  }
+
+  .landing-text {
+    font-size: abstracts.$paragraphMob1; // Mobile paragraph size
+  }
+
+  .landing-button {
+    font-size: abstracts.$paragraphMob1; // Mobile button size
+  }
+}

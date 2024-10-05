@@ -1,0 +1,147 @@
+// app.scss
+@use 'styles/abstracts';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Added to maintain consistent sizing across elements
+}
+
+body {
+  font-family: abstracts.$font;
+  background-color: abstracts.$greypurple; // Subtle background color for better contrast
+  color: abstracts.$darkblue; // Default text color
+  line-height: 1.6; // Improved readability
+}
+
+h1, h2, h3, h4, h5 {
+  color: abstracts.$darkblue; // Consistent heading color
+  margin-bottom: 1rem; // Consistent bottom margin for headings
+}
+
+p {
+  margin-bottom: 1rem; // Consistent bottom margin for paragraphs
+}
+
+// Style for buttons
+.button {
+  background-color: abstracts.$darkblue; // Default button background
+  color: white;
+  border-radius: 50px; // Rounded corners
+  padding: 10px 20px; // Consistent padding
+  font-size: abstracts.$paragraph1; // Consistent font size
+  border: none; // Remove default border
+  cursor: pointer; // Change cursor on hover
+  transition: background-color 0.3s ease; // Smooth background color transition
+
+  &:hover {
+    background-color: abstracts.$midpurple; // Change background on hover
+  }
+}
+
+// Style for input fields
+input, textarea {
+  border-radius: 10px; // Consistent border radius
+  padding: 10px; // Consistent padding
+  border: 1px solid abstracts.$darkblue; // Consistent border color
+  font-size: abstracts.$paragraph1; // Consistent font size
+
+  &:focus {
+    border-color: abstracts.$midpurple; // Change border color on focus
+    outline: none; // Remove default outline
+  }
+}
+
+// Centered Container
+.container {
+  max-width: 1200px; // Maximum width for large screens
+  margin: 0 auto; // Center horizontally
+  padding: 20px; // Padding around the container
+}
+
+// In your app.scss or a dedicated landing.scss
+.landing-title {
+	color: abstracts.$darkblue; // Title color
+	margin-bottom: 20px; // Space below title
+  }
+  
+  .landing-text {
+	color: abstracts.$greypurple; // Text color
+	font-size: abstracts.$paragraph1; // Font size for text
+  }
+  
+  .landing-button {
+	background-color: abstracts.$midpurple; // Button background
+	color: white;
+	border: none; // Remove default border
+	padding: 10px 20px; // Consistent padding
+	border-radius: 50px; // Rounded corners
+	transition: background-color 0.3s ease; // Smooth transition
+  
+	&:hover {
+	  background-color: abstracts.$darkblue; // Change background on hover
+	}
+  }
+  
+  // In your app.scss or a dedicated resources.scss
+.resources-container {
+	padding: 20px; // Padding for the resources page
+  }
+  
+  .resource-card {
+	background-color: white; // Card background color
+	border-radius: 10px; // Rounded corners
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+	padding: 20px; // Padding inside the card
+	margin-bottom: 20px; // Space between cards
+  
+	&:hover {
+	  transform: scale(1.02); // Slight zoom effect on hover
+	  transition: transform 0.3s; // Smooth transition
+	}
+  }
+  // In your app.scss or a dedicated login.scss
+.login-form {
+	display: flex; // Flexbox for alignment
+	flex-direction: column; // Stack elements vertically
+	max-width: 400px; // Maximum width for the form
+	margin: 0 auto; // Center form horizontally
+  }
+  
+  .login-input {
+	margin-bottom: 15px; // Space below each input
+  }
+  
+  // Style for the login button
+  .login-button {
+	background-color: abstracts.$darkblue; // Button color
+	color: white;
+	padding: 12px; // Padding
+	border-radius: 50px; // Rounded corners
+	font-size: abstracts.$paragraph1; // Font size
+  
+	&:hover {
+	  background-color: abstracts.$midpurple; // Change on hover
+	}
+  }
+  // In your app.scss or a dedicated navbar.scss
+.navbar {
+	background-color: abstracts.$darkblue; // Navbar background
+	color: white; // Navbar text color
+	padding: 15px 20px; // Padding for navbar
+	display: flex; // Flexbox for layout
+	justify-content: space-between; // Space between items
+	align-items: center; // Center items vertically
+  
+	.navbar-item {
+	  color: white; // Item color
+	  margin-left: 20px; // Space between items
+  
+	  &:hover {
+		text-decoration: underline; // Underline on hover
+	  }
+	}
+  }
+  
+  
+  

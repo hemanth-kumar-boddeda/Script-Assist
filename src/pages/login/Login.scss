@@ -1,0 +1,62 @@
+// login.scss
+@use '../../styles/abstracts'; // Adjust the path as necessary
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center the items horizontally
+  justify-content: center; // Center the items vertically
+  height: 100vh; // Full viewport height
+  background-color: abstracts.$greypurple; // Background color from abstracts
+  font-family: abstracts.$font; // Font from abstracts
+  padding: 20px; // Padding around the container
+}
+
+.login-title {
+  font-size: abstracts.$heading1; // Title size from abstracts
+  color: abstracts.$darkblue; // Title color from abstracts
+  margin-bottom: 20px; // Space below the title
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column; // Stack inputs vertically
+  width: 100%; // Full width
+  max-width: 400px; // Max width for form
+}
+
+.login-input {
+  margin-bottom: 15px; // Space between inputs
+}
+
+.login-button {
+  background-color: abstracts.$darkblue; // Button background from abstracts
+  color: #fff; // White text color
+  padding: 10px; // Button padding
+  border-radius: 5px; // Rounded corners
+  border: none; // No border for button
+  font-size: abstracts.$paragraph1; // Button font size from abstracts
+  cursor: pointer; // Pointer cursor on hover
+
+  &:hover {
+    background-color: abstracts.$midpurple; // Change background on hover
+  }
+}
+
+.login-footer {
+  margin-top: 20px; // Space above footer
+  text-align: center; // Center footer text
+  font-size: abstracts.$paragraph2; // Footer text size
+  color: abstracts.$darkPurple; // Footer text color
+}
+
+// Responsive Styles
+@media(max-width: 600px) {
+  .login-title {
+    font-size: abstracts.$headingMob1; // Mobile title size
+  }
+
+  .login-button {
+    font-size: abstracts.$paragraphMob1; // Mobile button size
+  }
+}
