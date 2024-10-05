@@ -71,7 +71,7 @@ const ResourceDetail = () => {
 
         {data.links?.flickr?.original?.length > 0 ? (
           <Carousel
-            slideSize="50%"
+            slideSize="100%" // Adjust to full width on mobile
             slideGap="md"
             align="center"
             loop
@@ -156,7 +156,6 @@ const ResourceDetail = () => {
               </Text>
             )}
 
-            {/* Additional Data Section (moved here) */}
             <Stack spacing="xs" className="additional-data" mt="lg">
               <Text className="resource-detail-static-fire">
                 Static Fire Date: {data.static_fire_date_utc ? new Date(data.static_fire_date_utc).toLocaleString() : 'N/A'}

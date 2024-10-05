@@ -51,7 +51,6 @@
   font-weight: bold;
 }
 
-// Images and links container
 .resource-detail-images {
   display: flex;
   flex-direction: column;
@@ -64,7 +63,6 @@
   margin-top: 15px;
 }
 
-// Additional Data
 .additional-data {
   margin-top: 20px;
 }
@@ -90,17 +88,22 @@
   }
 
   .resource-detail-images {
-    flex-direction: row; // Stack images horizontally on larger screens
-    justify-content: center; // Center images
+    flex-direction: column; // Stack images vertically on smaller screens
+    align-items: center; // Center images
     gap: 10px; // Consistent gap between images
   }
 }
 
 .patch-images {
-    width: 100%;         /* Make the container take full width */
-    height: 200px;       /* Set a fixed height, adjust as needed */
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
+  width: 100%;         /* Make the container take full width */
+  height: auto;       /* Allow height to adjust based on content */
+  display: flex;
+  flex-direction: column; /* Stack images vertically */
+  gap: 10px; /* Consistent gap */
+  align-items: center; /* Center images */
+}
+
+.patch-images img {
+  width: 100%; /* Ensure images take full width */
+  height: auto; /* Maintain aspect ratio */
+}
