@@ -1,0 +1,146 @@
+.resources-container {
+  position: relative;
+  min-height: 100vh;
+  background: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .moon-image {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+  }
+
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; // Ensure stars stay behind other elements
+    pointer-events: none; // Prevents interference with user interactions
+  }
+
+  .star {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); // Glowing white stars
+    border-radius: 50%;
+    animation: twinkle 1.5s infinite alternate;
+    opacity: 0.8;
+  }
+
+  @keyframes twinkle {
+    from {
+      opacity: 0.3;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .resources-title {
+    font-size: 2.5rem;
+    z-index: 2;
+    margin-bottom: 20px;
+  }
+
+  .resources-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+    z-index: 2;
+
+    .search-input {
+      width: 60%;
+      background-color: transparent;
+      color: rgb(0, 0, 0);
+      // border: 1px solid white;
+      padding: 10px;
+      font-size: 1rem;
+
+      &::placeholder {
+        color: #000000;
+      }
+    }
+
+    .sort-select {
+      width: 30%;
+      background-color: transparent;
+      // border: 1px solid white;
+      color: white;
+
+      .mantine-Select-item {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+
+  .resources-scroll-area {
+    width: 100%;
+    max-width: 800px;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .resources-table {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1); // Transparent table background
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+
+    thead {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    th {
+      font-weight: bold;
+      color: #fff;
+    }
+
+    td {
+      color: #eee;
+    }
+
+    .details-link {
+      color: #00bcd4;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    tbody tr:hover {
+      background-color: rgba(255, 255, 255, 0.05); // Highlight row on hover
+    }
+  }
+
+  .loader {
+    color: white;
+    z-index: 2;
+  }
+
+  .error {
+    color: red;
+    z-index: 2;
+  }
+}
